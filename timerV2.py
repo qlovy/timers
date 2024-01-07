@@ -8,7 +8,7 @@ from tkinter import * # for the user interface
 def callback (input):
     if input.isdigit():
         return True
-    elif input is "":
+    elif input == "":
         return True
     else:
         return False
@@ -24,6 +24,7 @@ def launch():
         countDown.geometry("300x300+400+50")
         time.sleep(timeElapse)
         end_message = Label(countDown, text="Your timer is finish").pack()
+        quit_button = Button(countDown, text="Quit", command=countDown.destroy).pack()
         countDown.mainloop()
 
 # USER INTERFACE
