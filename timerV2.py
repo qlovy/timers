@@ -57,6 +57,3 @@ LaunchButton = Button(root, text="Launch", command=launch).pack(side=LEFT)  # la
 QuitButton = Button(root, text="Quit", command=root.destroy).pack(side=LEFT)    # quit the window
 
 root.mainloop() # display the window
-        
-# do a complete user interface for the timer (asking to sending)
-# display the time elpased --> V3
