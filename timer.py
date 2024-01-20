@@ -1,7 +1,7 @@
 """
 This file show the possibility with the timer module
 
-This also the first version of the timer V1
+This is the first version of the timer V1
 
 PS: maybe add the dateTime module ??
 

@@ -5,19 +5,21 @@ Timer V2 is a timer with a new window appear on your screen to tell you when it'
 import time  # for manage the time
 from tkinter import * # for the user interface  
 
+# confirm the stat of the input
 def callback (input):
+    # number
     if input.isdigit():
         return True
+    # nothing
     elif input == "":
         return True
+    # other character
     else:
         return False
 
 def launch():
     if timeChoose.get().isdigit():
         timeElapse = int(timeChoose.get())
-        print(timeElapse)
-        #start_message = Label(root, text="Start timer").pack(side=BOTTOM)
         # new window
         countDown = Tk()
         countDown.title("Timer count down")
