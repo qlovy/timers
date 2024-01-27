@@ -1,6 +1,6 @@
 '''
 Timer V3,
-goal: user interface and seconds elapsed on the screen
+goal: user interface and seconds elapsed on the screen, in console
 '''
 
 import time  # for manage the time
