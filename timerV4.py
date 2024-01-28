@@ -12,12 +12,37 @@ def read_entry():
         # Launch the process
         print("OK")
         error_message.destroy()
+        launch_timer()
     else:
         # ask for an other input
         print("not OK")
         if display == False:
             error_message.pack()
             display = True
+
+def launch_timer():
+    timeChoose = int(entry.get())
+    start_seconds = time.time()
+    current_seconds = time.time()
+    perfect_seconds = 0
+    countdown = Tk()
+    countdown.geometry("200x200")
+    start_message = Label(countdown, text="Time start now")
+    start_message.pack()
+    while current_seconds - start_seconds < timeChoose:
+        time_elapse = round(current_seconds - start_seconds)
+        if time_elapse > perfect_seconds:
+            '''
+            if perfect_seconds != 0:
+                time_elapse_label.destroy()
+            '''
+            time_elapse_label = Label(countdown, text=time_elapse)
+            time_elapse_label.pack()
+            perfect_seconds = time_elapse
+        current_seconds = time.time()
+    stop_message = Label(countdown, text="Time finish")
+    stop_message.pack()
+    countdown.mainloop()
 
 display = False
 # user interface
@@ -42,12 +67,6 @@ error_message = Label(window, text="Make sure to write an number")
 #button
 submit_button = Button(window, text="Submit", command=read_entry).pack(pady=10)
 quit_button = Button(window, text="Quit", command=window.destroy).pack()
-'''
-countdown = Tk()
-countdown.geometry("200x200")
-message = Label(countdown, text="test").pack()
-countdown.mainloop()
-'''
 
 window.mainloop()
 '''
