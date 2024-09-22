@@ -5,6 +5,7 @@ goals: user interface with tkinter and countdown of the time choose by the user
 
 import time  # for manage the time
 from tkinter import *  # for the user interface
+from playsound import playsound
 
 
 def read_entry():
@@ -42,6 +43,7 @@ def launch_timer():
         window.update()
     end_message = Label(window, text="Time is finished")
     end_message.pack(pady=10)
+    playsound("ding.mp3")
 
 
 display = False
