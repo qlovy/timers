@@ -57,7 +57,7 @@ title = Label(window, text="Welcome in Timer V4", font=("Arial", 25))
 title.pack(padx=50, pady=20)
 
 # entry text and entry
-entry_text = Label(window, text="How many seconds you want to elapse ?")
+entry_text = Label(window, text="How many seconds do you want to elapse ?")
 entry_text.pack()
 entry = Entry(window)
 entry.pack(pady=10)
