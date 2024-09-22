@@ -9,4 +9,4 @@ J'ai utilisé le module "time" pour le fonctionnement du minuteur.
 Et le module "tkinter" pour l'interface.
 
 ## Amélioration
-Ajouter un son à la fin des timers graphiques ?
+- Ajouter un son à la fin des timers graphiques ? => fait !
